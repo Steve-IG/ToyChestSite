@@ -3,88 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ToyChest.AI - Coming Soon</title>
+    <title>ToyChest.AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Arial', sans-serif;
+            font-family: 'Public Sans', sans-serif;
         }
 
         body {
             background: #efeee7;
             min-height: 100vh;
             display: flex;
+            flex-direction: column;
             justify-content: center;
             align-items: center;
-            text-align: center;
             padding: 20px;
-        }
-
-        .container {
-            max-width: 800px;
-            padding: 40px;
-            background: white;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            text-align: center;
         }
 
         .logo-img {
-            max-width: 300px;
+            max-width: 600px;
             width: 100%;
             height: auto;
-            margin-bottom: 30px;
         }
 
-        h1 {
-            color: #2c3e50;
-            font-size: 3rem;
+        .tagline {
+            color: #333;
+            font-size: 1.6rem;
+            max-width: 1200px;
+            line-height: 1.4;
+            font-weight: 500;
             margin-bottom: 20px;
         }
 
-        p {
-            color: #7f8c8d;
-            font-size: 1.2rem;
-            margin-bottom: 30px;
-            line-height: 1.6;
-        }
-
-        .logo {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: #3498db;
-            margin-bottom: 30px;
-        }
-
-        .coming-soon {
+        .email-link {
+            color: #333;
             font-size: 1.5rem;
-            color: #e74c3c;
-            margin-bottom: 20px;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .email-link:hover {
+            color: #666;
         }
 
         @media (max-width: 600px) {
-            h1 {
-                font-size: 2rem;
-            }
-            .logo {
-                font-size: 2rem;
-            }
-            .container {
-                padding: 20px;
-            }
             .logo-img {
                 max-width: 200px;
+            }
+            .tagline {
+                font-size: 1rem;
+                padding: 0 20px;
+            }
+            .email-link {
+                font-size: 1.2rem;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <img src="assets/toychestlogo.png" alt="ToyChest.AI Logo" class="logo-img">
-        <h1>Something Amazing is Coming</h1>
-        <p>We're working hard to bring you an innovative platform that will revolutionize how you manage and interact with your toy collection.</p>
-        <div class="coming-soon">Coming Soon</div>
-    </div>
+    <img src="assets/toychestlogo.png" alt="ToyChest.AI Logo" class="logo-img">
+    <p class="tagline">Using AI to bridge the physical-digital divide in interactive entertainment.</p>
+    <a href="mailto:info@toychest.ai" class="email-link">
+        <i class="fas fa-envelope"></i>
+    </a>
 </body>
 </html> 
