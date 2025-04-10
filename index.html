@@ -13,7 +13,7 @@
         }
 
         body {
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            background: #efeee7;
             min-height: 100vh;
             display: flex;
             justify-content: center;
@@ -28,6 +28,13 @@
             background: white;
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo-img {
+            max-width: 300px;
+            width: 100%;
+            height: auto;
+            margin-bottom: 30px;
         }
 
         h1 {
@@ -66,12 +73,15 @@
             .container {
                 padding: 20px;
             }
+            .logo-img {
+                max-width: 200px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="logo">ToyChest.AI</div>
+        <img src="assets/toychestlogo.png" alt="ToyChest.AI Logo" class="logo-img">
         <h1>Something Amazing is Coming</h1>
         <p>We're working hard to bring you an innovative platform that will revolutionize how you manage and interact with your toy collection.</p>
         <div class="coming-soon">Coming Soon</div>
