@@ -8,7 +8,10 @@ export function SectionShell({
   introClassName = "",
 }) {
   return (
-    <section id={id} className={`relative py-20 sm:py-28 ${className}`}>
+    <section
+      id={id}
+      className={`relative pb-12 pt-16 sm:pb-16 sm:pt-20 ${className}`}
+    >
       <div className="mx-auto w-full max-w-7xl px-6 lg:px-8">
         {(eyebrow || title || description) && (
           <div className={`max-w-3xl ${introClassName}`}>

@@ -9,64 +9,125 @@ const contactHref =
 
 const proofMetrics = [
   {
-    value: "Screen-first",
-    title: "Kids already live in games",
-    body: "Gen Alpha expects connected play, identity, and rewards to live on screen.",
+    value: "Gen Alpha is screen-first",
+    title: "Video games dominate engageemnt",
+    body: "Physical toys struggle to compete for attention.",
   },
   {
-    value: "$3B+",
-    title: "The category was proven",
-    body: "Toys-to-Life became a billion-dollar category because kids loved unlocking game content with toys.",
+    value: "Toys-To-Life was huge",
+    title: "The toys + games model was proven",
+    body: "Toys-to-Life was a billion-dollar category because kids loved using toys to unlock game content.",
   },
   {
-    value: "No hardware",
-    title: "What changes with ToyChest",
-    body: "Computer vision and phone cameras remove the expensive hardware friction that killed the old model.",
+    value: "Hardware sank it",
+    title: "Special toys meant inventory risk",
+    body: "Previous versions required toys with NFC chips and software that required NFC reader base stations.  What if you could eliminate the need for special hardware?",
   },
 ];
 
 const platformFeatures = [
   {
     title: "Toy Recognition Engine",
-    body: "Recognizes physical toys with a camera. No bases. No chips. No extra hardware.",
+    body: "Recognizes physical toys with a smart device camera. Verifies liveness to prevent fraud. No bases. No chips. No extra hardware.",
+    media: (
+      <div className="overflow-hidden rounded-3xl border border-[#17171b]/8 bg-white/70">
+        <Image
+          src="/assets/Media/Timeline%201_01_00_32_11.jpg"
+          alt="Toy recognition scanning flow shown on a tablet"
+          width={1200}
+          height={675}
+          className="h-60 w-full object-cover"
+        />
+      </div>
+    ),
   },
   {
     title: "Game SDK",
     body: "Designed for Unity and Unreal so teams can plug ToyChest into game reward systems fast.",
+    media: (
+      <div className="grid h-60 grid-cols-2 gap-3 rounded-3xl border border-[#17171b]/8 bg-white/70 p-4">
+        <div className="flex items-center justify-center rounded-3xl border border-[#17171b]/8 bg-[#f8f4ec] p-4">
+          <Image
+            src="/assets/Media/Unity-Logo%20(1).png"
+            alt="Unity logo"
+            width={320}
+            height={180}
+            className="max-h-25 w-auto object-contain"
+          />
+        </div>
+        <div className="flex items-center justify-center rounded-3xl border border-[#17171b]/8 bg-[#f8f4ec] p-4">
+          <Image
+            src="/assets/Media/Unreal_Engine_logo.png"
+            alt="Unreal Engine logo"
+            width={320}
+            height={180}
+            className="max-h-25 w-auto object-contain"
+          />
+        </div>
+      </div>
+    ),
   },
   {
     title: "Scanner App",
     body: "Makes toy scanning work for console, PC, and companion-led experiences.",
+    media: (
+      <div className="overflow-hidden rounded-3xl border border-[#17171b]/8 bg-white/70">
+        <Image
+          src="/assets/Media/Scanner%20App.png"
+          alt="Scanner app shown on a mobile device"
+          width={1200}
+          height={1200}
+          className="h-60 w-full object-cover object-top"
+        />
+      </div>
+    ),
   },
   {
     title: "Admin Portal",
     body: "Manage toy-to-reward mapping and activation rules from one clean control layer.",
+    media: (
+      <div className="overflow-hidden rounded-3xl border border-[#17171b]/8 bg-white/70">
+        <Image
+          src="/assets/Media/image%20(2).png"
+          alt="ToyChest admin portal interface"
+          width={1200}
+          height={1200}
+          className="h-60 w-full object-cover object-top"
+        />
+      </div>
+    ),
   },
 ];
 
 const buildIdeas = [
   "Characters",
   "Skins",
-  "Quests",
-  "Digital collectibles",
-  "AR experiences",
-  "Power boosts",
   "Vehicles",
-  "Virtual currency",
+  "Levels",
+  "Game Modes",
+  "Power boosts",
+  "Virtual Currency",
+  "XP",
 ];
 
 const partnerModels = [
   {
     title: "Middleware licensing",
     body: "Studios integrate ToyChest and own the player-facing game experience.",
+    image: "/assets/Media/noun-middleware-5794570%20(1).png",
+    imageAlt: "Middleware licensing icon",
   },
   {
     title: "Co-development",
-    body: "We help build the toy-to-game loop, content logic, and product experience together.",
+    body: "We build the toy-to-game loop, content logic, and product experience together.",
+    image: "/assets/Media/noun-handshake-8309360%20(1).png",
+    imageAlt: "Co-development handshake icon",
   },
   {
     title: "Full game development",
     body: "We build a full toys-to-life experience around your toys, brand, and IP.",
+    image: "/assets/Media/noun-game-development-8192188%20(1).png",
+    imageAlt: "Full game development icon",
   },
 ];
 
@@ -111,6 +172,9 @@ export default function HomePage() {
             <Link href="#how-it-works" className="transition hover:text-black">
               How It Works
             </Link>
+            <Link href="#what-is-possible" className="transition hover:text-black">
+              What&apos;s Possible
+            </Link>
             <Link href="#how-we-partner" className="transition hover:text-black">
               How We Partner
             </Link>
@@ -142,10 +206,10 @@ export default function HomePage() {
           <div className="w-full">
             <Reveal className="mx-auto flex max-w-5xl flex-col items-center text-center">
               <h1 className="max-w-5xl text-4xl font-semibold tracking-[-0.08em] text-white sm:text-6xl lg:text-[5.2rem] lg:leading-[0.92]">
-                Your Toys Should Do More
+                Toys Should Do More
               </h1>
               <p className="mt-6 max-w-3xl text-lg font-bold leading-8 text-white sm:text-xl">
-                What if your toys could unlock characters, items, rewards, and more inside video games?
+                What if toys could unlock characters or grant rewards inside video games?
                 
               </p>
               <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
@@ -163,8 +227,9 @@ export default function HomePage() {
 
       <SectionShell
         id="why-toychest"
+        eyebrow="Why ToyChest.AI"
         title="Kids still love toys. Play just moved to screens."
-        description="ToyChest brings those worlds back together. The demand has already been proven. The part that needed reinventing was the hardware."
+        description="ToyChest brings those worlds back together. The model has already been proven. The part that needed solving was the hardware."
         className="pt-16 sm:pt-20"
       >
         <div className="mt-10">
@@ -180,50 +245,17 @@ export default function HomePage() {
         id="how-it-works"
         eyebrow="How It Works"
         title="Computer vision that turns toys into game content."
-        description="Keep it simple: scan the toy, recognize the toy, unlock the content."
+        description="Keep it simple: scan the toy, recognize the toy, unlock the content.  Works with any toy and any game.  No special hardware required."
       >
-        <div className="mt-12 grid gap-6 lg:grid-cols-[0.95fr_1.05fr]">
-          <Reveal>
-            <GlassCard className="overflow-hidden p-3">
-              <div className="relative overflow-hidden rounded-[1.5rem] border border-[#17171b]/8">
-                <video
-                  autoPlay
-                  muted
-                  loop
-                  playsInline
-                  poster="/assets/Media/Timeline%201_01_00_32_11.jpg"
-                  className="aspect-[4/5] w-full object-cover"
-                >
-                  <source
-                    src="/assets/Media/ToyChest%20Teaser.mp4"
-                    type="video/mp4"
-                  />
-                </video>
-                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-[#17171b] via-[#17171b]/75 to-transparent p-6">
-                  <div className="grid grid-cols-3 gap-3 text-center">
-                    {["Scan toy", "Toy recognized", "Game unlocks"].map(
-                      (step) => (
-                        <div
-                          key={step}
-                          className="rounded-2xl border border-white/15 bg-white/10 px-3 py-3 text-xs font-medium uppercase tracking-[0.18em] text-white/95"
-                        >
-                          {step}
-                        </div>
-                      ),
-                    )}
-                  </div>
-                </div>
-              </div>
-            </GlassCard>
-          </Reveal>
-
+        <div className="mt-12">
           <div className="grid gap-6 sm:grid-cols-2">
             {platformFeatures.map((feature, index) => (
               <Reveal key={feature.title} delay={index * 0.06}>
                 <FeatureCard
-                  index={`0${index + 1}`}
                   title={feature.title}
                   body={feature.body}
+                  media={feature.media}
+                  layout={feature.layout}
                 />
               </Reveal>
             ))}
@@ -232,114 +264,79 @@ export default function HomePage() {
       </SectionShell>
 
       <SectionShell
-        id="how-we-partner"
-        eyebrow="How we partner"
-        title="Flexible partnership models for toy brands, studios, and IP holders."
-        description="We can license the platform, build together, or deliver the full experience, then map it to the kinds of toy-connected content partners want to create."
+        id="what-is-possible"
+        eyebrow="What&apos;s possible"
+        title="Make your IP more collectible, more playable, and more connected."
+        description="Start imagining your own universe of connected experiences."
       >
-        <div className="mt-12 grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
-          <Reveal>
-            <GlassCard className="overflow-hidden p-3">
-              <div className="grid gap-3 rounded-[1.5rem] border border-[#17171b]/8 bg-[linear-gradient(180deg,rgba(255,255,255,0.72),rgba(255,255,255,0.45))] p-3">
-                <Image
-                  src="/assets/Media/Timeline%201_01_00_32_11.jpg"
-                  alt="Toy scanning demo on a tablet"
-                  width={1400}
-                  height={900}
-                  className="rounded-[1.25rem] object-cover"
-                />
-                <div className="grid grid-cols-2 gap-3">
-                  <Image
-                    src="/assets/Media/Screenshot%20%283%29.jpg"
-                    alt="ToyChest gameplay screenshot"
-                    width={1200}
-                    height={675}
-                    className="h-full rounded-[1.25rem] object-cover"
-                  />
-                  <Image
-                    src="/assets/Media/image%20%282%29.png"
-                    alt="ToyChest admin portal screenshot"
-                    width={1024}
-                    height={848}
-                    className="h-full rounded-[1.25rem] object-cover"
-                  />
-                </div>
-              </div>
-            </GlassCard>
-          </Reveal>
-
-          <div className="grid gap-6">
-            {partnerModels.map((model, index) => (
-              <Reveal key={model.title} delay={index * 0.06}>
-                <GlassCard className="p-7">
-                  <div className="flex items-start gap-4">
-                    <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full border border-[#2c7a7b]/20 bg-[#2c7a7b]/10 text-sm font-semibold text-[#215f60]">
-                      0{index + 1}
-                    </div>
-                    <div>
-                      <h3 className="text-2xl font-semibold tracking-[-0.04em] text-[#17171b]">
-                        {model.title}
-                      </h3>
-                      <p className="mt-3 max-w-xl text-sm leading-6 text-[#4d4a46]">
-                        {model.body}
-                      </p>
-                    </div>
-                  </div>
-                </GlassCard>
-              </Reveal>
-            ))}
-          </div>
-        </div>
-
         <Reveal className="mt-12">
-          <div className="max-w-3xl">
-            <p className="mb-5 text-[0.7rem] font-semibold uppercase tracking-[0.32em] text-[#2c7a7b]">
-              What we can build
-            </p>
-            <h3 className="text-3xl font-semibold tracking-[-0.05em] text-[#17171b] sm:text-4xl">
-              Make your IP more collectible, more playable, and more connected.
-            </h3>
-            <p className="mt-5 text-base leading-7 text-[#4d4a46]">
-              This is where partners should start imagining their own universe inside the ToyChest loop.
-            </p>
-          </div>
-        </Reveal>
-
-        <Reveal className="mt-8">
           <GlassCard className="p-8">
             <div className="flex flex-wrap gap-3">
               {buildIdeas.map((idea) => (
                 <Pill key={idea}>{idea}</Pill>
               ))}
             </div>
+            <div className="mt-8">
+              <h3 className="text-2xl font-semibold tracking-[-0.04em] text-[#17171b] sm:text-3xl">
+                Works with New or Existing Games
+              </h3>
+            </div>
             <div className="mt-8 grid gap-6 lg:grid-cols-2">
               <div className="rounded-[1.75rem] border border-[#17171b]/8 bg-[#f4ede0] p-6">
-                <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#2c7a7b]">
-                  Mode 1
-                </p>
-                <h3 className="mt-4 text-2xl font-semibold tracking-[-0.04em] text-[#17171b]">
-                  Existing game
+                <h3 className="text-2xl font-semibold tracking-[-0.04em] text-[#17171b]">
+                  Existing Games
                 </h3>
                 <p className="mt-3 max-w-md text-sm leading-6 text-[#4d4a46]">
-                  Toy scan to entitlement to reward. Plug ToyChest into the
-                  reward economy your game already has.
+                  Uses the Scanner App to scan toys. Integrates with the game&apos;s existing reward system. Manage toy-game reward map through the Admin Portal.
                 </p>
               </div>
               <div className="rounded-[1.75rem] border border-[#17171b]/8 bg-[#f4ede0] p-6">
-                <p className="text-xs font-semibold uppercase tracking-[0.28em] text-[#2c7a7b]">
-                  Mode 2
-                </p>
-                <h3 className="mt-4 text-2xl font-semibold tracking-[-0.04em] text-[#17171b]">
-                  New game built around toys
+                <h3 className="text-2xl font-semibold tracking-[-0.04em] text-[#17171b]">
+                  New Games
                 </h3>
                 <p className="mt-3 max-w-md text-sm leading-6 text-[#4d4a46]">
                   Design the scan itself as a hero mechanic and build a new
-                  toys-to-life experience without old hardware constraints.
+                  toys-to-life experience without old hardware constraints. Easy SDK integration means rapid development.
                 </p>
               </div>
             </div>
           </GlassCard>
         </Reveal>
+      </SectionShell>
+
+      <SectionShell
+        id="how-we-partner"
+        eyebrow="How we partner"
+        title="Flexible partnership models for toy brands, studios, and IP holders."
+        description="We can license the technology, build together, or deliver a full game experience to your desired specs."
+      >
+        <div className="mt-12">
+          <div className="grid gap-6 lg:grid-cols-3">
+            {partnerModels.map((model, index) => (
+              <Reveal key={model.title} delay={index * 0.06}>
+                <GlassCard className="h-full p-7">
+                  <div className="flex h-32 items-center justify-center">
+                    <Image
+                      src={model.image}
+                      alt={model.imageAlt}
+                      width={160}
+                      height={160}
+                      className="max-h-28 w-auto object-contain"
+                    />
+                  </div>
+                  <div className="mt-6">
+                    <h3 className="text-2xl font-semibold tracking-[-0.04em] text-[#17171b]">
+                      {model.title}
+                    </h3>
+                    <p className="mt-3 text-sm leading-6 text-[#4d4a46]">
+                      {model.body}
+                    </p>
+                  </div>
+                </GlassCard>
+              </Reveal>
+            ))}
+          </div>
+        </div>
       </SectionShell>
 
       <section id="contact" className="pb-24 pt-8 sm:pb-28">
@@ -349,16 +346,13 @@ export default function HomePage() {
               <GlowOrb className="absolute -right-10 top-0 h-48 w-48 rounded-full bg-[#d59b55]/16 blur-3xl" />
               <div className="relative grid gap-10 lg:grid-cols-[1fr_auto] lg:items-end">
                 <div>
-                  <p className="text-[0.72rem] font-semibold uppercase tracking-[0.36em] text-[#2c7a7b]">
-                    Early partners
-                  </p>
                   <h2 className="mt-5 max-w-4xl text-4xl font-semibold tracking-[-0.06em] text-[#17171b] sm:text-6xl">
-                    Launch the next generation of toys-to-life.
+                    Launch the next generation of Toys-to-Life.
                   </h2>
                   <p className="mt-6 max-w-2xl text-base leading-7 text-[#4d4a46] sm:text-lg">
                     We are looking for toy manufacturers, game studios, and IP
-                    holders who want a simpler way to connect physical products
-                    to digital engagement.
+                    holders who want to connect their physical toys
+                    with digital games.
                   </p>
                   <div className="mt-6 flex flex-wrap gap-3">
                     <Pill>Toy manufacturers</Pill>
@@ -369,12 +363,6 @@ export default function HomePage() {
 
                 <div className="flex flex-col gap-4 lg:min-w-[240px]">
                   <CTAButton href={contactHref}>Contact Us</CTAButton>
-                  <Link
-                    href="mailto:info@toychest.ai"
-                    className="text-center text-sm font-medium text-[#2c7a7b] transition hover:text-[#215f60]"
-                  >
-                    info@toychest.ai
-                  </Link>
                 </div>
               </div>
             </div>

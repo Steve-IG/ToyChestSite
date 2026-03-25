@@ -35,13 +35,27 @@ export function MetricCard({ value, title, body }) {
   );
 }
 
-export function FeatureCard({ title, body, index }) {
+export function FeatureCard({ title, body, media, layout = "stack" }) {
+  if (layout === "side") {
+    return (
+      <GlassCard className="h-full min-h-[21rem] p-6">
+        <div className="grid h-full gap-5 sm:grid-cols-[150px_minmax(0,1fr)] sm:items-stretch">
+          {media ? <div className="h-full">{media}</div> : null}
+          <div>
+            <h3 className="text-xl font-semibold tracking-[-0.03em] text-[#17171b]">
+              {title}
+            </h3>
+            <p className="mt-3 text-sm leading-6 text-[#4d4a46]">{body}</p>
+          </div>
+        </div>
+      </GlassCard>
+    );
+  }
+
   return (
     <GlassCard className="p-6">
-      <div className="flex h-11 w-11 items-center justify-center rounded-full border border-[#2c7a7b]/25 bg-[#2c7a7b]/10 text-sm font-semibold text-[#215f60]">
-        {index}
-      </div>
-      <h3 className="mt-5 text-xl font-semibold tracking-[-0.03em] text-[#17171b]">
+      {media ? <div className="mb-5">{media}</div> : null}
+      <h3 className="text-xl font-semibold tracking-[-0.03em] text-[#17171b]">
         {title}
       </h3>
       <p className="mt-3 text-sm leading-6 text-[#4d4a46]">{body}</p>
